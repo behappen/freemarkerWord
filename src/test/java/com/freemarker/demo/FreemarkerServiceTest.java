@@ -29,7 +29,7 @@ public class FreemarkerServiceTest {
         Map<String, Object> dataMap = new HashMap<String, Object>();
         dataMap.put("name", "yacongliu");
 
-        String msg = IDocument.exportDoc(dataMap, "D:/test.doc");
+        String msg = IDocument.exportDoc(dataMap, "doc/test.doc");
 
 
         System.out.println(msg);
@@ -58,7 +58,7 @@ public class FreemarkerServiceTest {
 
         dataMap.put("columns", list);
 
-        String msg = IDocument.exportDoc(dataMap, "D:/testTable.doc");
+        String msg = IDocument.exportDoc(dataMap, "doc/testTable.doc");
 
         System.out.println(msg);
 
@@ -71,7 +71,7 @@ public class FreemarkerServiceTest {
         Map<String, Object> dataMap = new HashMap<String, Object>(2);
         dataMap.put("name", "yacong_liu");
 
-        String msg = IDocument.exportDoc(dataMap, "D:/test.doc");
+        String msg = IDocument.exportDoc(dataMap, "doc/test.doc");
 
         System.out.println(msg);
 
@@ -88,7 +88,7 @@ public class FreemarkerServiceTest {
     @Test
     public void exportExcel(){
         try {
-            File file = new File("D:/list.xlsx");
+            File file = new File("doc/list.xlsx");
             FileInputStream fileInputStream = new FileInputStream(file);
             Workbook workbook = new XSSFWorkbook(fileInputStream);
 
@@ -127,7 +127,7 @@ public class FreemarkerServiceTest {
             IDocument IDocument = new FreemarkerService("temp");
             //生成word文档
             dataMap.put("columns", persons);
-            String msg = IDocument.exportDoc(dataMap, "D:/testTable.doc");
+            String msg = IDocument.exportDoc(dataMap, "doc/testTable.doc");
 
             System.out.println(msg);
 
