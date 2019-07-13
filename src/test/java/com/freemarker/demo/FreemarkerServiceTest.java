@@ -98,7 +98,7 @@ public class FreemarkerServiceTest {
 
             List<Person> persons = new ArrayList<>();
 
-            for (int i = 0; i < rowNumTotal; i++) {
+            for (int i = 0; i <= rowNumTotal; i++) {
                 //获取行
                 Row row = sheet.getRow(i);
                 //总列数
